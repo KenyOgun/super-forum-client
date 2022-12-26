@@ -30,10 +30,19 @@
 .content {
   min-height: var(--min-screen-height);
   grid-area: content;
-  background-color: blanchedalmond;
+  background-color: #ffebcd;
 }
 
 .rightmenu {
   grid-area: rightmenu;
   background-color: coral;
+}
+
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "content";
+  }
 }
