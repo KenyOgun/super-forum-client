@@ -1,5 +1,5 @@
 import React from "react";
-import { useWindowDimensions } from "../hooks/useWindowDimensions";
+import { useWindowDimensions } from "../../hooks/useWindowDimensions";
 
 const SideBar = () => {
   const { width } = useWindowDimensions();
