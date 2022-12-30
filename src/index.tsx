@@ -5,8 +5,20 @@ import App from "./App";
 import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
+import ReactModal from "react-modal";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={configureStore()}>
+    <BrowserRouter>
+      <ErrorBoundary>{[<App key="App" />]}</ErrorBoundary>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
+);
+
+ReactModal.setAppElement("#root");
 
 // If you want your app to work offline and load faster,
 // you can change
