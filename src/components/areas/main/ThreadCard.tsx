@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import "./ThreadCard.css";
 import Thread from "../../../models/Thread";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { faEye, faReplyAll } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useWindowDimensions } from "../../../hooks/useWindowDimensions";
@@ -13,11 +13,11 @@ interface ThreadCardProps {
 }
 
 const ThreadCard: FC<ThreadCardProps> = ({ thread }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { width } = useWindowDimensions();
 
   const onClickShowThread = (e: React.MouseEvent<HTMLDivElement>) => {
-    history.push("/thread/" + thread.id);
+    navigate("/thread/" + thread.id);
   };
 
   const getResponses = (thread: Thread) => {
