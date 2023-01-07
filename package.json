@@ -20,6 +20,7 @@
     "@types/redux": "^3.6.0",
     "@types/slate": "^0.47.7",
     "@types/slate-react": "^0.22.9",
+    "date-fns": "^2.29.3",
     "emotion": "^10.0.27",
     "is-hotkey": "^0.1.6",
     "lodash": "^4.17.20",
