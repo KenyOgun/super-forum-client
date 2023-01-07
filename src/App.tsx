@@ -27,10 +27,10 @@ function App() {
 
   return (
     <Routes>
-      <Route exact={true} path="/" render={renderHome} />
-      <Route path="/categorythreads/:categoryId" render={renderHome} />
-      <Route path="/thread/:id" render={renderThread} />
-      <Route path="/userprofile/:id" render={renderUserProfile} />
+      <Route path="/" element={<Home />} />
+      <Route path="/categorythreads/:categoryId" element={<Home />} />
+      <Route path="/thread/:id" element={<Thread />} />
+      <Route path="/userprofile/:id" element={<UserProfile />} />
     </Routes>
   );
 }
