@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/routes/Home";
 import Thread from "./components/routes/thread/Thread";
 import UserProfile from "./components/routes/userProfile/UserProfile";
@@ -26,12 +26,12 @@ function App() {
   const renderUserProfile = (props: any) => <UserProfile {...props} />;
 
   return (
-    <Switch>
+    <Routes>
       <Route exact={true} path="/" render={renderHome} />
       <Route path="/categorythreads/:categoryId" render={renderHome} />
       <Route path="/thread/:id" render={renderThread} />
       <Route path="/userprofile/:id" render={renderUserProfile} />
-    </Switch>
+    </Routes>
   );
 }
 
